@@ -16,10 +16,12 @@
             :key="index"
             class="nav-item"
           >
-            <router-link
-              to="/"
-              class="before:content-[' '] relative py-2 before:absolute before:bottom-0 before:left-1/2 before:h-px before:w-4 before:-translate-x-1/2 before:bg-white"
-            >
+            <!-- <router-link
+              :to="NavItem.to"
+              class="before:content-[' '] relative py-2 before:bottom-0 before:left-1/2 before:h-px before:w-4 before:-translate-x-1/2 before:bg-white before:duration-200 hover:before:absolute"
+            > -->
+
+            <router-link :to="NavItem.to" class="nav-link relative py-2">
               {{ NavItem.label }}
             </router-link>
           </li>
@@ -127,3 +129,9 @@ onMounted(() => {
   });
 });
 </script>
+
+<style>
+.nav-link.router-link-active {
+  border-bottom: 1px solid white;
+}
+</style>

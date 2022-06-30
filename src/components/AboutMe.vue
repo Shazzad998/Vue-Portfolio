@@ -37,14 +37,11 @@
 
       <div class="about-image flex items-center justify-center">
         <div class="md:px-4">
-          <div
-            class="mx-auto w-52 overflow-hidden rounded-sm md:w-64 lg:w-72 xl:w-96"
-          >
-            <img
-              src="../images/profile.jpg"
-              alt="profile-image"
-              class="w-full"
-            />
+          <div class="relative mx-auto w-52 rounded-sm md:w-64 lg:w-72 xl:w-96">
+            <img src="../images/profile.jpg" alt="profile-image" class="" />
+            <div
+              class="absolute inset-0 z-0 -ml-4 -mt-4 mr-4 mb-4 border border-zinc-600"
+            ></div>
           </div>
           <div class="about-image mt-4 flex justify-center">
             <span

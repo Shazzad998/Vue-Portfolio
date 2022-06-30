@@ -80,7 +80,7 @@ import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  let t1 = gsap.timeline({ defaults: { duration: 0.5, delay: 2 } });
+  let t1 = gsap.timeline({ defaults: { duration: 0.5, delay: 1 } });
 
   t1.from(".section-title", {
     "clip-path": "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
