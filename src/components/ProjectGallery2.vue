@@ -1,6 +1,6 @@
 <template>
   <Swiper
-    :slidesPerView="2"
+    :slidesPerView="1"
     :spaceBetween="20"
     :loop="true"
     :pagination="{
@@ -12,25 +12,14 @@
       nextEl: '.button-next',
       prevEl: '.button-prev',
     }"
-    :breakpoints="{
-      '640': {
-        slidesPerView: 3,
-      },
-      '768': {
-        slidesPerView: 4,
-      },
-    }"
     :modules="modules"
     class="my-4"
   >
-    <swiper-slide v-for="(project, i) in props.projects" :key="i">
-      <div class="relative text-2xl font-semibold">
-        <img :src="project.thumb" alt="" class="aspect-video object-cover" />
-        <router-link
-          :to="{ name: 'project.detail', params: { id: project.id } }"
-          class="absolute inset-0"
-          @click="getCurrentProject(project.id)"
-        ></router-link>
+    <swiper-slide v-for="(image, i) in images" :key="i">
+      <div class="flex justify-center">
+        <div class="relative aspect-[4/3] text-2xl font-semibold">
+          <img :src="image" alt="" class="h-full w-full object-cover" />
+        </div>
       </div>
     </swiper-slide>
 
@@ -40,11 +29,11 @@
       >
         <div>01</div>
         <div class="swiper-pagination"></div>
-        <div v-if="props.projects.length > 1">
+        <div v-if="props.images.length > 1">
           {{
-            props.projects.length > 9
-              ? props.projects.length
-              : "0" + props.projects.length
+            props.images.length > 9
+              ? props.images.length
+              : "0" + props.images.length
           }}
         </div>
       </div>
@@ -80,8 +69,7 @@ import { Pagination, Navigation } from "swiper";
 const modules = [Pagination, Navigation];
 
 const props = defineProps({
-  projects: Object,
-  getCurrentProject: Function,
+  images: Object,
 });
 </script>
 

@@ -34,7 +34,8 @@ export default function useProjects() {
       id: "2",
       type: "Full-Stack",
       title: "E-commerce",
-      description: "A typical E-commerce application",
+      description:
+        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
       thumb: "../images/e-commerce/shp_1.PNG",
       images: [
         "../images/e-commerce/shp_1.PNG",
@@ -63,7 +64,8 @@ export default function useProjects() {
       id: "3",
       type: "Back-End",
       title: "Inventory Management",
-      description: "A Inventory management application",
+      description:
+        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
       thumb: "../images/inventory-management/in_mn_1.PNG",
       images: [
         "../images/inventory-management/in_mn_1.PNG",
@@ -88,7 +90,8 @@ export default function useProjects() {
       id: "4",
       type: "Design",
       title: "Travel Site",
-      description: "A travel site landing page design",
+      description:
+        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
       thumb: "../images/travel-site/t_1.png",
       images: [
         "../images/travel-site/t_1.png",
@@ -109,6 +112,11 @@ export default function useProjects() {
       featured: true,
     },
   ]);
+
+  const current_project_reload = ref(0);
+  const reload = () => {
+    current_project_reload.value++;
+  };
   const current_project = ref([]);
 
   const featured_projects = projects.value.filter(
@@ -125,6 +133,8 @@ export default function useProjects() {
     projects,
     current_project,
     featured_projects,
+    current_project_reload,
     getProject,
+    reload,
   };
 }

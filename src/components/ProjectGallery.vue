@@ -15,7 +15,13 @@
     }"
   >
     <swiper-slide v-for="(image, i) in props.images" :key="i">
-      <img :src="image" alt="" class="aspect-[3/3] rounded-sm object-cover" />
+      <div class="flex aspect-[4/3] items-center">
+        <img
+          :src="image"
+          alt=""
+          class="h-full w-full rounded-sm object-cover"
+        />
+      </div>
     </swiper-slide>
 
     <div class="mt-4 flex items-center justify-center gap-x-4">

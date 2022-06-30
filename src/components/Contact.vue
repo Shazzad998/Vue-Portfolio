@@ -3,12 +3,12 @@
 
   <SectionWrapper>
     <div class="relative pb-20 lg:pb-32">
-      <SectionHeader :label="'Visit & Contact'" />
+      <SectionHeader :label="'Visit & Contact'" class="contact-title" />
 
       <div class="relative grid grid-cols-1 gap-y-16 pt-16 md:grid-cols-2">
         <!-- PERSONAL INFO -->
         <div class="uppercase" data-aos="fade-right" data-aos-duration="1000">
-          <div class="flex flex-col gap-y-4 sm:text-lg md:text-base">
+          <div class="location flex flex-col gap-y-4 sm:text-lg md:text-xl">
             <div class="flex items-center gap-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,19 +73,15 @@
               <p class="tracking-widest">freshstart.com</p>
             </div>
           </div>
-          <div class="mt-8 md:mr-8 md:mt-8 lg:mr-20">
-            <iframe
-              class="aspect-video w-full rounded-sm"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.160837321795!2d89.19167301537789!3d23.164329216827078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff10eb69da8347%3A0xbc557c37edd1256!2z4Kan4Kaw4KeN4Kau4Kak4Kay4Ka-!5e0!3m2!1sen!2sbd!4v1641283479727!5m2!1sen!2sbd"
-              style="border: 0"
-              loading="lazy"
-            ></iframe>
-          </div>
+          <div class="mt-8 md:mr-8 md:mt-8 lg:mr-20"></div>
         </div>
 
         <!-- CONTACT FORM  -->
         <div class="md:pl-6" data-aos="fade-left" data-aos-duration="1000">
-          <form action="#" class="flex flex-col gap-y-8 md:gap-y-12">
+          <form
+            action="#"
+            class="contact-form flex flex-col gap-y-8 md:gap-y-12"
+          >
             <!-- NAME -->
             <div
               class="flex items-center gap-x-4 border-b border-zinc-600 pb-2"
@@ -105,7 +101,7 @@
 
               <input
                 type="text"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR NAME"
               />
             </div>
@@ -129,7 +125,7 @@
 
               <input
                 type="email"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR EMAIL"
               />
             </div>
@@ -151,7 +147,7 @@
 
               <input
                 type="text"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR SUBJECT (FOR ATTENTION)"
               />
             </div>
@@ -171,7 +167,7 @@
                 />
               </svg>
               <textarea
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR MESSAGE"
                 rows="4"
               ></textarea>
@@ -192,4 +188,38 @@
 import SectionHeader from "./SectionHeader.vue";
 import SecondaryButton from "./SecondaryButton.vue";
 import SectionWrapper from "./SectionWrapper.vue";
+import useAnimation from "@/composable/animation";
+import { onMounted } from "vue";
+
+const { animate } = useAnimation();
+
+onMounted(() => {
+  animate.from(".contact-title", {
+    scrollTrigger: { trigger: ".contact-title", start: "top 80%" },
+    opacity: 0,
+    x: "-60px",
+  });
+
+  let tl = animate.timeline({
+    defaults: { duration: 1, ease: "power4.inOut" },
+    scrollTrigger: { trigger: ".location", start: "top 80%" },
+  });
+
+  tl.from(".location .flex", {
+    opacity: 0,
+    y: "60px",
+    stagger: 0.2,
+  });
+
+  let tl2 = animate.timeline({
+    defaults: { duration: 1, ease: "power4.inOut" },
+    scrollTrigger: { trigger: ".contact-form", start: "top 80%" },
+  });
+
+  tl2.from(".contact-form div", {
+    opacity: 0,
+    y: "60px",
+    stagger: 0.2,
+  });
+});
 </script>

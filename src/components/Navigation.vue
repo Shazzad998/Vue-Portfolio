@@ -2,12 +2,32 @@
   <div class="fixed top-0 left-0 right-0 z-40 mx-6">
     <header class="container mx-auto flex items-center justify-between px-4">
       <!-- LOGO -->
-      <router-link :to="{ name: 'home' }" class="flex items-center p-2">
+      <router-link
+        :to="{ name: 'home' }"
+        class="nav-item flex items-center p-2"
+      >
         <img src="../images/logo.svg" alt="" class="h-12 w-12" />
       </router-link>
 
+      <nav class="hidden md:block">
+        <ul class="flex gap-x-20 text-xl">
+          <li
+            v-for="(NavItem, index) in navItems"
+            :key="index"
+            class="nav-item"
+          >
+            <router-link
+              to="/"
+              class="before:content-[' '] relative py-2 before:absolute before:bottom-0 before:left-1/2 before:h-px before:w-4 before:-translate-x-1/2 before:bg-white"
+            >
+              {{ NavItem.label }}
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+
       <nav
-        class="z-40 mx-2 flex items-center justify-between py-4 text-xl text-zinc-50"
+        class="z-40 mx-2 flex items-center justify-between py-4 text-xl text-zinc-50 md:hidden"
       >
         <div
           class="fixed inset-0 left-1/4 flex flex-col gap-y-6 bg-[#1a1a1a] px-12 py-36 text-lg font-semibold duration-200 ease-in md:left-1/2"
@@ -29,7 +49,10 @@
       </nav>
 
       <!-- MENU BUTTON -->
-      <button class="nav-toggle z-50 p-2 outline-none" @click="navToggle">
+      <button
+        class="nav-toggle nav-item z-50 p-2 outline-none md:hidden"
+        @click="navToggle"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="open-svg h-8 w-8"
@@ -67,7 +90,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+
+import gsap from "gsap";
 
 const navExpanded = ref(false);
 
@@ -91,4 +116,14 @@ const navItems = ref([
 const navToggle = () => {
   navExpanded.value = !navExpanded.value;
 };
+
+onMounted(() => {
+  gsap.from(".nav-item", {
+    y: "-80px",
+    opacity: 0,
+    stagger: 0.3,
+    duration: 0.5,
+    delay: 1.5,
+  });
+});
 </script>

@@ -10,7 +10,7 @@
           v-for="(link, index) in links"
           :href="link.link"
           :key="index"
-          class="flex justify-center p-2 text-gray-400"
+          class="so-icon flex justify-center p-2 text-gray-400"
           :class="link.color"
         >
           <i :class="[link.icon]" class="duration-200 ease-in"></i>
@@ -21,6 +21,20 @@
 </template>
 
 <script setup>
+import gsap from "gsap";
+
+import { onMounted } from "vue";
+
+onMounted(() => {
+  let t1 = gsap.timeline({ defaults: { duration: 1, delay: 2 } });
+
+  t1.from(".so-icon", {
+    y: "2px",
+    opacity: 0,
+    stagger: 0.2,
+  });
+});
+
 const links = [
   {
     icon: "fa-brands fa-facebook-f",

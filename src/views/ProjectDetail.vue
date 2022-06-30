@@ -1,17 +1,13 @@
 <template>
   <SectionWrapper>
-    <div class="relative md:px-4 lg:px-8">
+    <div class="relative">
       <SectionHeader :label="'Project overview'" />
 
       <div class="px-4 pt-12">
         <div
           class="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 xl:gap-x-10 2xl:gap-x-14"
         >
-          <div
-            class="relative flex items-center"
-            data-aos="fade-right"
-            data-aos-duration="800"
-          >
+          <div class="relative flex items-center">
             <ProjectGallery :images="current_project[0].images" />
           </div>
 
@@ -69,6 +65,23 @@
               </div>
             </div>
 
+            <div class="mt-8 sm:mt-14 md:mt-6 xl:mt-8 2xl:mt-12">
+              <h1
+                class="text-xl font-bold uppercase tracking-widest sm:text-2xl md:text-lg xl:text-xl 2xl:text-2xl"
+              >
+                technology used
+              </h1>
+              <ul class="mt-3 flex flex-wrap gap-6">
+                <li
+                  v-for="tech in current_project[0].techs"
+                  :key="tech"
+                  class="text-sm sm:text-base md:text-sm xl:text-lg"
+                >
+                  {{ tech }}
+                </li>
+              </ul>
+            </div>
+
             <div
               class="mt-8 grid grid-cols-2 gap-2 gap-y-8 sm:mt-14 md:mt-6 md:gap-x-6 md:gap-y-4 xl:mt-8 xl:gap-y-8 2xl:mt-12 2xl:gap-y-12"
             >
@@ -115,17 +128,37 @@
       </div>
     </div>
   </SectionWrapper>
+
+  <SectionWrapper>
+    <SectionHeader :label="'Other Projects'" />
+
+    <div class="px-4 pt-12">
+      <Carousel
+        :projects="projects"
+        :key="current_project_reload"
+        :getCurrentProject="getCurrentProject"
+      />
+    </div>
+  </SectionWrapper>
 </template>
 
 <script setup>
 import useProjects from "@/composable/projects";
 import { useRoute } from "vue-router";
-import ProjectGallery from "../components/ProjectGallery.vue";
+import ProjectGallery from "../components/ProjectGallery2.vue";
 import SectionHeader from "@/components/SectionHeader.vue";
 import SectionWrapper from "@/components/SectionWrapper.vue";
+import Carousel from "@/components/Carousel.vue";
 
 const route = useRoute();
-const { current_project, getProject } = useProjects();
+const { projects, current_project, current_project_reload, getProject } =
+  useProjects();
 
+window.scrollTo(0, 0);
 getProject(route.params.id);
+
+const getCurrentProject = (id) => {
+  window.scrollTo(0, 0);
+  getProject(id);
+};
 </script>

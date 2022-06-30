@@ -1,61 +1,129 @@
 <template>
-  <SectionWrapper v-if="fullStack.length">
-    <div class="relative md:px-4 lg:px-8">
-      <SectionHeader :label="'full-stack'" />
+  <div>
+    <SectionWrapper>
+      <div class="relative">
+        <SectionHeader :label="'portfolio'" />
+        <div class="pt-12">
+          <div>
+            <ul class="gap flex text-zinc-500">
+              <li>
+                <button
+                  type="button"
+                  class="filter__button border-b px-10 py-4 text-2xl text-zinc-200"
+                  data-filter="all"
+                >
+                  All
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="filter__button px-10 py-4 text-2xl"
+                  data-filter=".Design"
+                >
+                  Design
+                </button>
+              </li>
 
-      <div class="relative px-4 pt-12">
-        <CarouselVue :projects="fullStack" />
+              <li>
+                <button
+                  type="button"
+                  class="filter__button px-10 py-4 text-2xl"
+                  data-filter=".Front-End"
+                >
+                  Front-End
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="filter__button px-10 py-4 text-2xl"
+                  data-filter=".Back-End"
+                >
+                  Back-End
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="filter__button px-10 py-4 text-2xl"
+                  data-filter=".Full-Stack"
+                >
+                  Full-Stack
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="projects__container mt-10 grid grid-cols-1 gap-4 md:grid-cols-3"
+          >
+            <router-link
+              v-for="project in projects"
+              :key="project.id"
+              :to="{ name: 'project.detail', params: { id: project.id } }"
+              class="project__card group relative aspect-[4/3] overflow-hidden rounded-md"
+              :class="project.type"
+            >
+              <div class="absolute inset-0 z-10">
+                <img
+                  class="group-hover:blur-xs h-full w-full object-cover transition-all duration-200 group-hover:scale-110 group-hover:opacity-80"
+                  :src="project.thumb"
+                  :alt="project.title"
+                />
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 z-30 opacity-0 transition-all duration-200 group-hover:opacity-100"
+              >
+                <h1 class="py-6 px-6 text-xl font-medium text-gray-50">
+                  {{ project.title }}
+                </h1>
+              </div>
+
+              <div
+                class="absolute -bottom-2 -left-4 -right-4 z-20 h-24 bg-zinc-900/50 opacity-0 blur-xl transition-all duration-200 group-hover:opacity-50"
+              ></div>
+            </router-link>
+          </div>
+        </div>
       </div>
-    </div>
-  </SectionWrapper>
-
-  <SectionWrapper v-if="design.length">
-    <div class="relative md:px-4 lg:px-8">
-      <SectionHeader :label="'Design'" />
-
-      <div class="relative px-4 pt-12">
-        <CarouselVue :projects="design" />
-      </div>
-    </div>
-  </SectionWrapper>
-  <SectionWrapper v-if="frontEnd.length">
-    <div class="relative md:px-4 lg:px-8">
-      <SectionHeader :label="'front-end'" />
-
-      <div class="relative px-4 pt-12">
-        <CarouselVue :projects="frontEnd" />
-      </div>
-    </div>
-  </SectionWrapper>
-  <SectionWrapper v-if="backEnd.length">
-    <div class="relative md:px-4 lg:px-8">
-      <SectionHeader :label="'back-end'" />
-
-      <div class="relative px-4 pt-12">
-        <CarouselVue :projects="backEnd" />
-      </div>
-    </div>
-  </SectionWrapper>
+    </SectionWrapper>
+  </div>
 </template>
 
 <script setup>
-import CarouselVue from "@/components/Carousel.vue";
-
-import useProjects from "@/composable/projects.js";
-import SectionHeader from "@/components/SectionHeader.vue";
 import SectionWrapper from "@/components/SectionWrapper.vue";
+import SectionHeader from "@/components/SectionHeader.vue";
+import mixitup from "mixitup";
+import { onMounted } from "vue";
+import useProjects from "@/composable/projects";
 
 const { projects } = useProjects();
 
-const fullStack = projects.value.filter(
-  (project) => project.type == "Full-Stack"
-);
+let mixerProjects;
+onMounted(() => {
+  let containerEl = document.querySelector(".projects__container");
 
-const design = projects.value.filter((project) => project.type == "Design");
+  if (containerEl) {
+    mixerProjects = mixitup(containerEl, {
+      selectors: {
+        target: ".project__card",
+      },
+      animation: {
+        duration: 300,
+      },
+    });
+  }
 
-const frontEnd = projects.value.filter(
-  (project) => project.type == "Front-End"
-);
+  const filterButtons = document.querySelectorAll(".filter__button");
 
-const backEnd = projects.value.filter((project) => project.type == "Back-End");
+  function activeButton() {
+    filterButtons.forEach((l) =>
+      l.classList.remove("border-b", "text-zinc-200")
+    );
+    this.classList.add("border-b", "text-zinc-200");
+  }
+
+  filterButtons.forEach((l) => l.addEventListener("click", activeButton));
+});
 </script>
