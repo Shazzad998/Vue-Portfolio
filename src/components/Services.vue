@@ -35,7 +35,7 @@
             >
               <span
                 class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
-                >10</span
+                >{{ design }}</span
               >
               projects
             </a>
@@ -73,7 +73,7 @@
             >
               <span
                 class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
-                >10</span
+                >{{ frontEnd }}</span
               >
               projects
             </a>
@@ -111,7 +111,7 @@
             >
               <span
                 class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
-                >10</span
+                >{{ backEnd }}</span
               >
               projects
             </a>
@@ -124,12 +124,28 @@
 
 <script setup>
 import useAnimation from "@/composable/animation";
+import useProjects from "@/composable/projects";
 import { onMounted } from "vue";
 import SectionHeader from "./SectionHeader.vue";
 import SectionWrapper from "./SectionWrapper.vue";
 
 const { animate } = useAnimation();
 
+const { projects } = useProjects();
+
+const design = projects.value.filter((p) => {
+  return p.type == "Design";
+}).length;
+
+const frontEnd = projects.value.filter((p) => {
+  return p.type == "Front-End" || p.type == "Full-Stack";
+}).length;
+
+const backEnd = projects.value.filter((p) => {
+  return p.type == "Back-End" || p.type == "Full-Stack";
+}).length;
+
+console.log(design);
 onMounted(() => {
   animate.from(".service-title", {
     scrollTrigger: { trigger: ".service-title", start: "top 80%" },

@@ -22,7 +22,7 @@
               class="absolute -ml-[3.3rem] mt-14 inline-block -rotate-90 xl:-ml-[3.7rem]"
             >
               <span
-                class="section-title bg-[#1f1f1f] text-xs font-bold uppercase tracking-[0.3em] text-zinc-500 xl:text-sm"
+                class="section-title bg-[#1f1f1f] text-xs font-bold uppercase tracking-[0.3em] text-zinc-400 xl:text-sm"
               >
                 INTRODUCTION</span
               >
@@ -45,15 +45,15 @@
           </div>
 
           <div
-            class="hero-text mt-8 text-xl font-normal tracking-widest text-zinc-300 lg:text-2xl"
+            class="hero-text mt-8 text-xl font-normal tracking-widest text-zinc-300 lg:text-3xl"
           >
             I'm a designer who loves to code
           </div>
           <div class="hero-text mt-2 lg:mt-4">
-            <p class="text-sm tracking-wider text-zinc-400 lg:text-base">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when.It is a long established fact
-              that a reader will be distracted.
+            <p class="text-sm tracking-wider text-zinc-400 lg:text-xl">
+              I'm a full-stack web developer specializing in building (and
+              occasionally designing) exceptional digital experience. Currently
+              I'm focused on creating websites for clients in Fiver.
             </p>
           </div>
         </div>

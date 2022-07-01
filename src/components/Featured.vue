@@ -20,7 +20,7 @@
               <img
                 :src="project.thumb"
                 alt=""
-                class="aspect-video rounded object-cover"
+                class="aspect-[4/3] rounded object-cover"
               />
               <span
                 class="card-item absolute -top-2 z-10 text-5xl font-bold sm:-top-4 sm:text-6xl lg:-top-8 lg:text-8xl"
@@ -62,7 +62,7 @@
                 {{ project.title }}
               </div>
               <div
-                class="card-item mt-2 hidden rounded bg-[#232323] px-8 py-6 text-sm font-light text-zinc-300 sm:block lg:text-base xl:mt-6 xl:px-10 xl:py-8 xl:text-lg"
+                class="card-item mt-2 hidden rounded bg-[#232323] px-8 py-6 text-sm font-light text-zinc-300 shadow-2xl sm:block lg:text-base xl:mt-6 xl:px-10 xl:py-8 xl:text-lg"
                 :class="[index % 2 == 0 ? '-mr-24' : '-ml-24']"
               >
                 <span

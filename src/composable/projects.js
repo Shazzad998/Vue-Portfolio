@@ -8,7 +8,7 @@ export default function useProjects() {
       title: "Task Manager",
       description:
         "A typical todo list with much more functionalities and work history. Built with vue js and tailwind css in the front end and laravel in the back end",
-      thumb: "../images/task-manager/tm_4.PNG",
+      thumb: "../images/task-manager/port-2.webp",
       images: [
         "../images/task-manager/tm_1.PNG",
         "../images/task-manager/tm_2.PNG",
@@ -66,7 +66,7 @@ export default function useProjects() {
       title: "Inventory Management",
       description:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
-      thumb: "../images/inventory-management/in_mn_1.PNG",
+      thumb: "../images/inventory-management/1.png",
       images: [
         "../images/inventory-management/in_mn_1.PNG",
         "../images/inventory-management/in_mn_2.PNG",
@@ -92,7 +92,33 @@ export default function useProjects() {
       title: "Travel Site",
       description:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
-      thumb: "../images/travel-site/t_1.png",
+      thumb: "../images/travel-site/travel-site-thumb.png",
+      images: [
+        "../images/travel-site/t_1.png",
+        "../images/travel-site/t_2.png",
+        "../images/travel-site/t_3.png",
+        "../images/travel-site/t_4.png",
+        "../images/travel-site/t_5.png",
+      ],
+      techs: ["Figma", "PhotoShop", "illustrator"],
+      steps: [
+        "Logo and icons design with Illustrator",
+        "Simple Ui Design with Figma",
+      ],
+      task: "Design Logo and UI",
+      client: "Md Shazzad",
+      live_link: "https://shazzadulislam.netlify.app",
+      completed_at: "22 April, 2022",
+      featured: true,
+    },
+
+    {
+      id: "5",
+      type: "Design",
+      title: "Easy E-commerce",
+      description:
+        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
+      thumb: "../images/easy-ecommerce/thumb.png",
       images: [
         "../images/travel-site/t_1.png",
         "../images/travel-site/t_2.png",
