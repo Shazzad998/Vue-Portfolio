@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^2.3.0",
     "autoprefixer": "^10.4.4",
     "mixitup": "^3.3.1",
-    "prettier-plugin-tailwindcss": "^0.1.8",
+    "prettier-plugin-tailwindcss": "^0.1.12",
     "tailwindcss": "^3.0.23",
     "vite": "^2.9.0"
   }
