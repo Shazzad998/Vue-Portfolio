@@ -2,14 +2,16 @@
   <div>
     <SectionWrapper>
       <div class="relative">
-        <SectionHeader :label="'portfolio'" />
+        <SectionHeader :label="'portfolio'" class="portfolio-title" />
         <div class="pt-12">
           <div>
-            <ul class="gap flex text-zinc-500">
+            <ul
+              class="filter__buttons__group flex text-lg text-zinc-500 lg:text-xl"
+            >
               <li>
                 <button
                   type="button"
-                  class="filter__button border-b px-10 py-4 text-2xl text-zinc-200"
+                  class="filter__button px-4 py-2 text-zinc-200 md:px-10 md:py-4"
                   data-filter="all"
                 >
                   All
@@ -18,7 +20,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-10 py-4 text-2xl"
+                  class="filter__button px-2 py-2 md:px-10 md:py-4"
                   data-filter=".Design"
                 >
                   Design
@@ -28,7 +30,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-10 py-4 text-2xl"
+                  class="filter__button px-2 py-2 md:px-10 md:py-4"
                   data-filter=".Front-End"
                 >
                   Front-End
@@ -37,7 +39,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-10 py-4 text-2xl"
+                  class="filter__button px-2 py-2 md:px-10 md:py-4"
                   data-filter=".Back-End"
                 >
                   Back-End
@@ -46,7 +48,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-10 py-4 text-2xl"
+                  class="filter__button px-2 py-2 md:px-10 md:py-4"
                   data-filter=".Full-Stack"
                 >
                   Full-Stack
@@ -97,8 +99,10 @@ import SectionHeader from "@/components/SectionHeader.vue";
 import mixitup from "mixitup";
 import { onMounted } from "vue";
 import useProjects from "@/composable/projects";
+import useAnimation from "@/composable/animation";
 
 const { projects } = useProjects();
+const { animate } = useAnimation();
 
 let mixerProjects;
 onMounted(() => {
@@ -118,12 +122,47 @@ onMounted(() => {
   const filterButtons = document.querySelectorAll(".filter__button");
 
   function activeButton() {
-    filterButtons.forEach((l) =>
-      l.classList.remove("border-b", "text-zinc-200")
-    );
-    this.classList.add("border-b", "text-zinc-200");
+    filterButtons.forEach((l) => l.classList.remove("text-zinc-200"));
+    this.classList.add("text-zinc-200");
   }
 
   filterButtons.forEach((l) => l.addEventListener("click", activeButton));
+
+  //header animation
+  animate.from(".portfolio-title", {
+    scrollTrigger: { trigger: ".portfolio-title", start: "top 80%" },
+    opacity: 0,
+    x: "-60px",
+  });
+
+  //buttons animation
+  let tl1 = animate.timeline({
+    defaults: { duration: 1, ease: "power4.inOut" },
+    scrollTrigger: {
+      trigger: ".filter__buttons__group",
+      start: "top 80%",
+    },
+  });
+
+  tl1.from(".filter__button", {
+    x: "60px",
+    opacity: 0,
+    stagger: 0.1,
+  });
+
+  //projects animation
+  let tl = animate.timeline({
+    defaults: { duration: 1, ease: "power4.inOut" },
+    scrollTrigger: {
+      trigger: ".projects__container",
+      start: "top 80%",
+    },
+  });
+
+  tl.from(".project__card", {
+    y: "60px",
+    opacity: 0,
+    stagger: 0.1,
+  });
 });
 </script>
