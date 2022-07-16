@@ -1,6 +1,6 @@
 <template>
   <div class="fixed top-0 left-0 right-0 z-40 mx-6">
-    <header class="container mx-auto flex items-center justify-between px-4">
+    <header class="container mx-auto flex items-center justify-between">
       <!-- LOGO -->
       <router-link
         :to="{ name: 'home' }"
@@ -40,7 +40,7 @@
         >
           <div v-for="(NavItem, index) in navItems" :key="index" class="p-4">
             <router-link
-              class="group relative py-4 pl-6 pr-10 uppercase tracking-wider duration-200 ease-in hover:text-gray-700 md:text-4xl"
+              class="group relative uppercase tracking-wider duration-200 ease-in hover:text-gray-700 md:text-4xl"
               :to="NavItem.to"
               @click="navExpanded = false"
             >
@@ -55,7 +55,7 @@
 
       <!-- MENU BUTTON -->
       <button
-        class="nav-toggle nav-item z-50 p-2 outline-none md:hidden"
+        class="nav-toggle nav-item z-50 outline-none md:hidden"
         @click="navToggle"
       >
         <svg
