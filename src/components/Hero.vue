@@ -34,12 +34,19 @@
             class="space-y-2 text-3xl font-normal uppercase tracking-widest text-zinc-400 lg:text-5xl"
           >
             <div class="hero-text">MD.</div>
-            <div
-              class="hero-text text-5xl font-semibold text-zinc-100 lg:text-7xl"
-            >
-              SHAZZAD<span
+            <div class="flex flex-wrap items-end">
+              <div
+                class="hero-text text-5xl font-semibold text-zinc-100 lg:text-7xl"
+              >
+                SHAZZAD<span
+                  class="hero-text mr-3 text-3xl font-normal text-zinc-400 lg:text-5xl"
+                  >UL</span
+                >
+              </div>
+
+              <span
                 class="hero-text text-3xl font-normal text-zinc-400 lg:text-5xl"
-                >UL <span>islam</span></span
+                >islam</span
               >
             </div>
           </div>
@@ -57,14 +64,33 @@
             </p>
           </div>
         </div>
-        <div
-          class="hero-button mt-6 ml-10 flex gap-x-2 sm:gap-x-8 md:ml-16 lg:mt-10 xl:mt-16"
-        >
-          <router-link
+        <div class="hero-button mt-20 ml-16 lg:mt-10 xl:mt-20">
+          <!-- <router-link
             :to="{ name: 'portfolio' }"
             class="rounded-sm border border-zinc-600 bg-zinc-300 px-8 py-2 text-xs font-medium uppercase text-zinc-800 duration-200 ease-in hover:bg-zinc-400 sm:text-sm md:py-3 md:text-xs lg:text-lg lg:font-semibold"
           >
             View Protfolio
+          </router-link> -->
+
+          <!-- <router-link
+            :to="{ name: 'portfolio' }"
+            class="relative rounded-full border border-zinc-600 bg-[#1f1f1f1f] px-10 py-2 text-xs font-medium uppercase text-zinc-200 duration-200 ease-in before:absolute before:h-0 before:w-4 before:bg-red-500 hover:bg-zinc-400 sm:text-sm md:py-4 md:text-xs lg:text-base lg:font-medium"
+          >
+            View Protfolio
+          </router-link> -->
+
+          <router-link
+            :to="{ name: 'portfolio' }"
+            class="relative rounded-full border border-zinc-500 px-12 py-5 text-xs uppercase"
+          >
+            <span
+              class="absolute -left-10 top-1/2 flex h-6 w-16 -translate-y-1/2 items-center bg-[#1f1f1f] text-zinc-500"
+            >
+              <div class="h-px w-full bg-zinc-500"></div>
+              <i class="fa-solid fa-angle-right -ml-1"></i>
+            </span>
+
+            View Portfolio
           </router-link>
         </div>
       </div>

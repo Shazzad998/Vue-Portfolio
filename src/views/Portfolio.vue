@@ -6,12 +6,12 @@
         <div class="pt-12">
           <div>
             <ul
-              class="filter__buttons__group flex text-lg text-zinc-500 lg:text-xl"
+              class="filter__buttons__group flex flex-wrap gap-4 px-2 text-lg text-zinc-500 md:gap-16 lg:text-xl"
             >
               <li>
                 <button
                   type="button"
-                  class="filter__button px-4 py-2 text-zinc-200 md:px-10 md:py-4"
+                  class="filter__button text-zinc-200"
                   data-filter="all"
                 >
                   All
@@ -20,7 +20,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-2 py-2 md:px-10 md:py-4"
+                  class="filter__button"
                   data-filter=".Design"
                 >
                   Design
@@ -30,7 +30,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-2 py-2 md:px-10 md:py-4"
+                  class="filter__button"
                   data-filter=".Front-End"
                 >
                   Front-End
@@ -39,7 +39,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-2 py-2 md:px-10 md:py-4"
+                  class="filter__button"
                   data-filter=".Back-End"
                 >
                   Back-End
@@ -48,7 +48,7 @@
               <li>
                 <button
                   type="button"
-                  class="filter__button px-2 py-2 md:px-10 md:py-4"
+                  class="filter__button"
                   data-filter=".Full-Stack"
                 >
                   Full-Stack
@@ -58,7 +58,7 @@
           </div>
 
           <div
-            class="projects__container mt-10 grid grid-cols-1 gap-4 md:grid-cols-3"
+            class="projects__container mt-10 grid grid-cols-1 gap-8 md:grid-cols-3"
           >
             <router-link
               v-for="project in projects"
