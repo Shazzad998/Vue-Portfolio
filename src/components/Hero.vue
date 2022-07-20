@@ -81,7 +81,7 @@
 
           <router-link
             :to="{ name: 'portfolio' }"
-            class="relative rounded-full border border-zinc-500 px-12 py-5 text-xs uppercase"
+            class="relative rounded-full border border-zinc-500 bg-[#1f1f1f] px-12 py-5 text-xs uppercase"
           >
             <span
               class="absolute -left-10 top-1/2 flex h-6 w-16 -translate-y-1/2 items-center bg-[#1f1f1f] text-zinc-500"
