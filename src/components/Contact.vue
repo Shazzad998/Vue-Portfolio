@@ -84,7 +84,7 @@
           >
             <!-- NAME -->
             <div
-              class="flex items-center gap-x-4 border-b border-zinc-600 pb-2"
+              class="input__wrapperflex items-center gap-x-4 border-b border-zinc-600 pb-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@
 
             <!-- EMAIL -->
             <div
-              class="flex items-center gap-x-4 border-b border-zinc-600 pb-2"
+              class="input__wrapperflex items-center gap-x-4 border-b border-zinc-600 pb-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@
 
             <!-- SUBJECT -->
             <div
-              class="flex items-center gap-x-4 border-b border-zinc-600 pb-2"
+              class="input__wrapperflex items-center gap-x-4 border-b border-zinc-600 pb-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,9 @@
             </div>
 
             <!-- MESSAGE -->
-            <div class="flex gap-x-4 border-b border-zinc-600 pb-2">
+            <div
+              class="input__wrapperflex gap-x-4 border-b border-zinc-600 pb-2"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -174,7 +176,7 @@
             </div>
 
             <!-- BUTTON  -->
-            <div class="mt-10 md:pl-6">
+            <div class="input__wrapper mt-10 md:pl-6">
               <router-link
                 :to="{ name: 'portfolio' }"
                 class="group relative rounded-full border border-zinc-500 bg-[#1f1f1f] px-8 py-4 text-xs font-semibold uppercase transition-colors duration-200 hover:border-zinc-300 hover:text-zinc-100 md:py-4 md:px-10"
@@ -182,9 +184,9 @@
                 <span
                   class="absolute -left-5 top-1/2 flex h-6 w-10 -translate-y-1/2 items-center bg-[#1f1f1f] text-zinc-500 transition-transform duration-200 group-hover:translate-x-2 group-hover:text-zinc-300 md:-left-7 md:w-12"
                 >
-                  <div
+                  <span
                     class="h-[2px] w-full bg-zinc-400 group-hover:bg-zinc-300"
-                  ></div>
+                  ></span>
                   <i
                     class="fa-solid fa-angle-right -ml-1 mt-px text-zinc-400 group-hover:text-zinc-300"
                   ></i>
@@ -232,7 +234,7 @@ onMounted(() => {
     scrollTrigger: { trigger: ".contact-form", start: "top 80%" },
   });
 
-  tl2.from(".contact-form div", {
+  tl2.from(".contact-form .input__wrapper", {
     opacity: 0,
     y: "60px",
     stagger: 0.2,
