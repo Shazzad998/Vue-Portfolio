@@ -1,6 +1,6 @@
 <template>
   <div class="fixed top-0 left-0 right-0 z-40 mx-6">
-    <header class="container mx-auto flex items-center justify-between">
+    <header class="container mx-auto flex items-center justify-between py-4">
       <!-- LOGO -->
       <router-link
         :to="{ name: 'home' }"
@@ -10,7 +10,7 @@
       </router-link>
 
       <nav class="hidden md:block">
-        <ul class="flex gap-x-20 text-xl">
+        <ul class="flex text-xl md:gap-x-12 lg:gap-x-16 xl:gap-x-20">
           <li
             v-for="(NavItem, index) in navItems"
             :key="index"
@@ -23,13 +23,29 @@
 
             <router-link
               :to="NavItem.to"
-              class="nav-link relative py-2 text-xl font-semibold uppercase tracking-wider"
+              class="nav-link relative py-2 px-8 text-xs uppercase tracking-wider text-zinc-400 transition-colors duration-200 hover:text-zinc-200"
             >
               {{ NavItem.label }}
             </router-link>
           </li>
         </ul>
       </nav>
+
+      <router-link
+        :to="{ name: 'portfolio' }"
+        class="group relative hidden rounded-full border border-zinc-500 bg-[#1f1f1f] px-8 py-4 text-xs font-semibold uppercase transition-colors duration-200 hover:border-zinc-300 hover:text-zinc-100 md:block md:py-4 md:px-10"
+      >
+        <span
+          class="absolute -left-5 top-1/2 flex h-6 w-10 -translate-y-1/2 items-center bg-[#1f1f1f] text-zinc-500 transition-transform duration-200 group-hover:translate-x-2 group-hover:text-zinc-300 md:-left-7 md:w-12"
+        >
+          <div class="h-[2px] w-full bg-zinc-400 group-hover:bg-zinc-300"></div>
+          <i
+            class="fa-solid fa-angle-right -ml-1 mt-px text-zinc-400 group-hover:text-zinc-300"
+          ></i>
+        </span>
+
+        Hire Me
+      </router-link>
 
       <nav
         class="z-40 mx-2 flex items-center justify-between py-4 text-xl text-zinc-50 md:hidden"
@@ -134,7 +150,29 @@ onMounted(() => {
 </script>
 
 <style>
+.nav-link.router-link-active::before {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid #cbcbcb;
+  border-left: 1px solid #cbcbcb;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav-link.router-link-active::after {
+  content: " ";
+  width: 12px;
+  height: 12px;
+  border-bottom: 1px solid #cbcbcb;
+  border-right: 1px solid #cbcbcb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .nav-link.router-link-active {
-  border-bottom: 1px solid white;
+  color: #ededed;
 }
 </style>

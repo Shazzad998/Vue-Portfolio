@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div class="about-image flex items-center justify-end">
+      <div class="about-image flex items-center justify-center md:justify-end">
         <div class="md:px-4">
           <div class="relative mx-auto w-52 rounded-sm md:w-64 lg:w-72 xl:w-96">
             <img src="../images/profile.jpg" alt="profile-image" class="" />
