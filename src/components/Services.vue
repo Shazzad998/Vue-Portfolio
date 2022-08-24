@@ -34,7 +34,7 @@
               class="font-semibold uppercase tracking-widest text-zinc-500"
             >
               <span
-                class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
+                class="mr-2 text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
                 >{{ design }}</span
               >
               projects
@@ -72,7 +72,7 @@
               class="font-semibold uppercase tracking-widest text-zinc-500"
             >
               <span
-                class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
+                class="mr-2 text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
                 >{{ frontEnd }}</span
               >
               projects
@@ -110,7 +110,7 @@
               class="font-semibold uppercase tracking-widest text-zinc-500"
             >
               <span
-                class="text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
+                class="mr-2 text-7xl font-extrabold tracking-tighter text-zinc-50 md:text-4xl lg:text-7xl xl:text-8xl"
                 >{{ backEnd }}</span
               >
               projects
