@@ -32,7 +32,9 @@
       </nav>
 
       <div class="nav-item hidden pl-6 md:block">
-        <PrimaryButton :label="'Hire me'" :link="{ name: 'portfolio' }" />
+        <a href="../../public/Resume.pdf" download>
+          <PrimaryButton label="Download CV" />
+        </a>
       </div>
 
       <nav

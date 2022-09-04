@@ -65,10 +65,9 @@
           </div>
         </div>
         <div class="hero-button mt-20 ml-16 lg:mt-10 xl:mt-20">
-          <PrimaryButton
-            :label="'View Portfolio'"
-            :link="{ name: 'portfolio' }"
-          />
+          <router-link :to="{ name: 'portfolio' }">
+            <PrimaryButton label="View Portfolio" />
+          </router-link>
         </div>
       </div>
     </div>

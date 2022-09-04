@@ -76,7 +76,7 @@
                 :class="[index % 2 == 0 ? 'sm:pl-8 xl:pl-10' : 'sm:ml-4']"
               >
                 <span
-                  class="hidden text-lg font-medium uppercase tracking-[0.25rem] text-zinc-500 xl:block"
+                  class="card-item hidden text-lg font-medium uppercase tracking-[0.25rem] text-zinc-500 xl:block"
                   >Technology used</span
                 >
                 <div
@@ -135,48 +135,28 @@ onMounted(() => {
           y: "60px",
         },
         "-=.8"
-      )
-        .from(
-          ".project-card-" + i + " .card-item",
-          {
-            opacity: 0,
-            x: "-60px",
-            stagger: 0.2,
-          },
-          "-=.8"
-        )
-        .from(
-          ".project-card-" + i + " .card-item .project-tech span",
-          {
-            opacity: 0,
-            x: -60,
-            stagger: 0.1,
-          },
-          "-=.8"
-        );
+      ).from(
+        ".project-card-" + i + " .card-item",
+        {
+          opacity: 0,
+          x: "-60px",
+          stagger: 0.2,
+        },
+        "-=.8"
+      );
     } else {
       tl.from(".project-card-" + i + " img", {
         opacity: 0,
         y: "60px",
-      })
-        .from(
-          ".project-card-" + i + " .card-item",
-          {
-            opacity: 0,
-            x: "60px",
-            stagger: 0.1,
-          },
-          "-=.8"
-        )
-        .from(
-          ".project-card-" + i + " .card-item .project-tech span",
-          {
-            opacity: 0,
-            x: 60,
-            stagger: 0.1,
-          },
-          "-=.8"
-        );
+      }).from(
+        ".project-card-" + i + " .card-item",
+        {
+          opacity: 0,
+          x: "60px",
+          stagger: 0.1,
+        },
+        "-=.8"
+      );
     }
   }
 });

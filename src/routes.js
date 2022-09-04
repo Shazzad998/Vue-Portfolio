@@ -4,7 +4,6 @@ import Contact from "./views/Contact.vue";
 import NotFound from "./views/NotFound.vue";
 import ProjectDetail from "./views/ProjectDetail.vue";
 
-/** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
   { path: "/", component: Home, meta: { title: "Home" }, name: "home" },
   {

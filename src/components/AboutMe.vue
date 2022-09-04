@@ -3,7 +3,7 @@
     <div class="grid grid-cols-1 gap-y-10 md:grid-cols-2">
       <div class="relative">
         <SectionHeader :label="'About me'" class="about-title" />
-        <div class="pt-12 xl:text-2xl">
+        <div class="pt-12 xl:text-xl">
           <div class="about-text px-1 tracking-wider text-zinc-400">
             <p class="text-justify">
               Hello! My name is Shazzad and I enjoy creating things that live on

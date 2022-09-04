@@ -177,10 +177,7 @@
 
             <!-- BUTTON  -->
             <div class="input__wrapper mt-10 md:pl-6">
-              <PrimaryButton
-                :label="'Send Message'"
-                :link="{ name: 'portfolio' }"
-              />
+              <PrimaryButton label="Send Message" />
             </div>
           </form>
         </div>
@@ -191,7 +188,6 @@
 
 <script setup>
 import SectionHeader from "./SectionHeader.vue";
-import SecondaryButton from "./SecondaryButton.vue";
 import SectionWrapper from "./SectionWrapper.vue";
 import useAnimation from "@/composable/animation";
 import { onMounted } from "vue";
