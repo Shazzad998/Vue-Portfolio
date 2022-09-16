@@ -8,6 +8,8 @@ module.exports = {
       fontFamily: {
         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
         saira: "'Saira Condensed', sans-serif;",
+        anton: "'Anton', sans-serif;",
+        antonio: "'Antonio', sans-serif;",
       },
     },
   },
