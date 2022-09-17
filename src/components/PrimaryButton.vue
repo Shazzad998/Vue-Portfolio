@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div
     class="group relative inline-block rounded-full border border-zinc-500 bg-[#1f1f1f] px-8 py-4 text-xs font-semibold uppercase transition-colors duration-200 hover:border-zinc-300 hover:text-zinc-100 md:py-4 md:px-10"
   >
@@ -21,10 +21,14 @@
 
     {{ label }}
   </div>
-</template>
+</template> -->
 
-<script setup>
-defineProps({
-  label: String,
-});
-</script>
+<template>
+  <div class="group inline-block border border-zinc-500">
+    <div
+      class="-m-px flex items-center gap-x-3 border border-zinc-500 bg-[#1e1e1e] px-10 py-3 font-semibold uppercase tracking-wider text-zinc-200 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+    >
+      <slot></slot>
+    </div>
+  </div>
+</template>

@@ -33,7 +33,7 @@
 
       <div class="nav-item hidden pl-6 md:block">
         <a href="../../public/Resume.pdf" download>
-          <PrimaryButton label="Download CV" />
+          <PrimaryButton> download cv </PrimaryButton>
         </a>
       </div>
 

@@ -3,7 +3,7 @@
     <Hero />
 
     <!-- ABOUT SECTION -->
-    <AboutMe />
+    <!-- <AboutMe /> -->
 
     <!-- LATEST WORKS -->
     <Featured />

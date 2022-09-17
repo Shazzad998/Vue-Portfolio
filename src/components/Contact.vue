@@ -101,7 +101,7 @@
 
               <input
                 type="text"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest placeholder:text-zinc-500 focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR NAME"
               />
             </div>
@@ -125,7 +125,7 @@
 
               <input
                 type="email"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest placeholder:text-zinc-500 focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR EMAIL"
               />
             </div>
@@ -147,7 +147,7 @@
 
               <input
                 type="text"
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest placeholder:text-zinc-500 focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR SUBJECT (FOR ATTENTION)"
               />
             </div>
@@ -169,7 +169,7 @@
                 />
               </svg>
               <textarea
-                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest focus:outline-none focus:ring-0 sm:placeholder:text-sm"
+                class="w-full appearance-none border-none bg-transparent uppercase placeholder:text-[0.6rem] placeholder:tracking-widest placeholder:text-zinc-500 focus:outline-none focus:ring-0 sm:placeholder:text-sm"
                 placeholder="TYPE YOUR MESSAGE"
                 rows="4"
               ></textarea>
@@ -177,7 +177,7 @@
 
             <!-- BUTTON  -->
             <div class="input__wrapper mt-10 md:pl-6">
-              <PrimaryButton label="Send Message" />
+              <PrimaryButton> Send Message </PrimaryButton>
             </div>
           </form>
         </div>

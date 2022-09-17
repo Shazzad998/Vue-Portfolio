@@ -23,7 +23,7 @@
                 class="aspect-[4/3] rounded object-cover"
               />
               <span
-                class="card-item absolute -top-2 z-10 text-5xl font-bold sm:-top-4 sm:text-6xl lg:-top-8 lg:text-8xl"
+                class="card-item absolute -top-2 z-10 text-5xl font-bold sm:-top-4 sm:text-6xl lg:-top-8"
                 :class="[
                   index % 2 == 0
                     ? '-right-1 sm:-right-4 '
@@ -33,7 +33,7 @@
               </span>
 
               <span
-                class="card-item absolute -top-2 z-0 bg-zinc-900 text-5xl font-bold text-zinc-900 blur-2xl sm:-top-4 sm:text-6xl lg:-top-8 lg:text-8xl"
+                class="card-item absolute -top-2 z-0 bg-zinc-900 text-5xl font-bold text-zinc-900 blur-2xl sm:-top-4 sm:text-6xl lg:-top-8"
                 :class="[
                   index % 2 == 0
                     ? '-right-1 sm:-right-4 '
@@ -50,7 +50,7 @@
               class="rounded-sm bg-[#232323] px-5 py-3 sm:bg-transparent sm:p-0"
             >
               <div
-                class="card-item text-lg font-medium sm:text-3xl lg:text-4xl xl:text-5xl"
+                class="card-item text-lg font-medium sm:text-3xl lg:text-4xl"
                 :class="[
                   index % 2 == 0 ? 'sm:-mr-24 sm:pl-8 xl:pl-10' : 'sm:ml-4 ',
                 ]"
@@ -62,23 +62,23 @@
                 {{ project.title }}
               </div>
               <div
-                class="card-item mt-2 hidden rounded bg-[#232323] px-8 py-6 text-sm font-light text-zinc-300 shadow-2xl sm:block lg:text-base xl:mt-6 xl:px-10 xl:py-8 xl:text-lg"
+                class="card-item mt-2 hidden rounded bg-[#232323] px-8 py-6 text-sm font-light text-zinc-300 shadow-2xl sm:block lg:text-base xl:mt-3 xl:px-10 xl:py-8 xl:text-lg"
                 :class="[index % 2 == 0 ? '-mr-24' : '-ml-24']"
               >
-                <span
+                <!-- <span
                   class="card-item hidden text-lg font-medium uppercase tracking-[0.25rem] text-zinc-500 xl:block"
                   >Project Description</span
-                >
+                > -->
                 {{ project.description }}
               </div>
               <div
-                class="card-item mt-2 xl:mt-6"
+                class="card-item mt-2 xl:mt-3"
                 :class="[index % 2 == 0 ? 'sm:pl-8 xl:pl-10' : 'sm:ml-4']"
               >
-                <span
+                <!-- <span
                   class="card-item hidden text-lg font-medium uppercase tracking-[0.25rem] text-zinc-500 xl:block"
                   >Technology used</span
-                >
+                > -->
                 <div
                   class="project-tech flex flex-wrap gap-x-4 text-sm font-medium text-zinc-500 lg:gap-x-6 lg:text-lg xl:text-xl xl:text-zinc-200"
                 >
@@ -90,7 +90,9 @@
         </router-link>
 
         <div class="button flex justify-center md:justify-end">
-          <PrimaryButton :label="'All works'" :link="{ name: 'portfolio' }" />
+          <router-link :to="{ name: 'portfolio' }">
+            <PrimaryButton>All works</PrimaryButton>
+          </router-link>
         </div>
       </div>
     </div>
