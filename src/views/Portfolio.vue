@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="">
     <SectionWrapper>
-      <div class="relative">
+      <div class="relative mt-20">
         <SectionHeader :label="'portfolio'" class="portfolio-title" />
         <div class="pt-12">
           <div>

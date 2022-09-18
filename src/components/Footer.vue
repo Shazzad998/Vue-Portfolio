@@ -5,10 +5,13 @@
         class="container mx-auto grid grid-cols-1 py-12 uppercase sm:py-14 md:grid-cols-2 md:py-16"
       >
         <div
-          class="footer-icon flex justify-center gap-x-6 text-zinc-50 md:items-center"
+          class="footer-icon z-50 flex justify-center gap-x-6 text-zinc-50 md:items-center"
         >
           <!-- facebook -->
-          <a href="https://www.facebook.com/Shazzad71973">
+          <a
+            href="https://www.facebook.com/Shazzad71973"
+            class="p-1 transition-transform duration-200 hover:-translate-y-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -22,7 +25,10 @@
             </svg>
           </a>
           <!-- instagram -->
-          <a href="https://www.instagram.com/shazzad_98">
+          <a
+            href="https://www.instagram.com/shazzad_98"
+            class="p-1 transition-transform duration-200 hover:-translate-y-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -37,7 +43,10 @@
             </svg>
           </a>
           <!-- twitter -->
-          <a href="https://www.linkedin.com/in/md-shazzadul-islam-07742b214">
+          <a
+            href="https://www.linkedin.com/in/md-shazzadul-islam-07742b214"
+            class="p-1 transition-transform duration-200 hover:-translate-y-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -51,7 +60,10 @@
             </svg>
           </a>
           <!-- whats app -->
-          <a href="https://www.linkedin.com/in/md-shazzadul-islam-07742b214">
+          <a
+            href="https://www.linkedin.com/in/md-shazzadul-islam-07742b214"
+            class="p-1 transition-transform duration-200 hover:-translate-y-1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -66,7 +78,7 @@
             </svg>
           </a>
         </div>
-        <div class="mt-6 tracking-widest md:col-start-1 md:row-start-1">
+        <div class="z-50 mt-6 tracking-widest md:col-start-1 md:row-start-1">
           <div class="footer-text flex justify-center">
             <span
               class="text-xl font-medium text-zinc-300 sm:text-2xl md:text-xl"

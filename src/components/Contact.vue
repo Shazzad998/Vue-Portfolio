@@ -177,7 +177,9 @@
 
             <!-- BUTTON  -->
             <div class="input__wrapper mt-10 md:pl-6">
-              <PrimaryButton> Send Message </PrimaryButton>
+              <button>
+                <PrimaryButton> Send Message </PrimaryButton>
+              </button>
             </div>
           </form>
         </div>

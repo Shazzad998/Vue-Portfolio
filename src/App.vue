@@ -1,9 +1,9 @@
 <script setup>
 import NavigationVue from "./components/Navigation.vue";
-import SocialIconsVue from "@/components/SocialIcons.vue";
 import FooterVue from "./components/Footer.vue";
 import gsap from "gsap";
 import { onMounted } from "vue";
+import SocialIcons from "./components/SocialIcons.vue";
 
 onMounted(() => {
   gsap.to(".overlay", {
@@ -20,11 +20,12 @@ onMounted(() => {
     <div
       class="overlay fixed top-0 left-0 z-50 h-screen w-full bg-[#1f1f1f]"
     ></div>
-    <SocialIconsVue />
+
     <div class="mx-6">
       <div
         class="background container mx-auto min-h-screen border-r border-[#343438]"
       >
+        <SocialIcons />
         <NavigationVue />
 
         <main>

@@ -3,7 +3,7 @@
     <div class="relative">
       <SectionHeader :label="'Latest Work'" class="work-title" />
       <div
-        class="relative grid grid-cols-1 gap-y-6 pt-20 sm:gap-y-8 sm:px-6 md:gap-y-12 xl:gap-y-28"
+        class="relative grid grid-cols-1 gap-y-6 pt-20 sm:gap-y-8 sm:px-6 md:gap-y-12 xl:gap-y-28 xl:px-20"
       >
         <router-link
           v-for="(project, index) in featured_projects"
@@ -23,23 +23,13 @@
                 class="aspect-[4/3] rounded object-cover"
               />
               <span
-                class="card-item absolute -top-2 z-10 text-5xl font-bold sm:-top-4 sm:text-6xl lg:-top-8"
+                class="card-item absolute -top-2 z-10 text-3xl font-bold sm:-top-4 sm:text-4xl lg:-top-6 lg:text-5xl"
                 :class="[
                   index % 2 == 0
                     ? '-right-1 sm:-right-4 '
                     : '-left-1 sm:-left-4',
                 ]"
                 >{{ index > 9 ? index : "0" + index }}
-              </span>
-
-              <span
-                class="card-item absolute -top-2 z-0 bg-zinc-900 text-5xl font-bold text-zinc-900 blur-2xl sm:-top-4 sm:text-6xl lg:-top-8"
-                :class="[
-                  index % 2 == 0
-                    ? '-right-1 sm:-right-4 '
-                    : '-left-1 sm:-left-4',
-                ]"
-                >00
               </span>
             </div>
           </div>

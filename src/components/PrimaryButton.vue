@@ -26,7 +26,7 @@
 <template>
   <div class="group inline-block border border-zinc-500">
     <div
-      class="-m-px flex items-center gap-x-3 border border-zinc-500 bg-[#1e1e1e] px-10 py-3 font-semibold uppercase tracking-wider text-zinc-200 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+      class="-m-px flex items-center gap-x-3 border border-zinc-500 bg-[#1e1e1e] px-6 py-3 text-xs font-semibold uppercase tracking-wider text-zinc-200 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
     >
       <slot></slot>
     </div>

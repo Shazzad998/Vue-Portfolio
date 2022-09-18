@@ -4,13 +4,13 @@
       class="container relative mx-auto flex h-screen items-center justify-end"
     >
       <div
-        class="absolute -right-8 flex w-16 flex-col gap-y-8 bg-[#1f1f1f] py-6 text-2xl"
+        class="absolute -right-8 flex w-16 flex-col gap-y-5 bg-[#1f1f1f] py-6 text-sm lg:text-base"
       >
         <a
           v-for="(link, index) in links"
           :href="link.link"
           :key="index"
-          class="so-icon flex justify-center p-2 text-gray-400"
+          class="so-icon flex justify-center p-2 text-gray-400 transition-transform duration-200 hover:-translate-y-2"
           :class="link.color"
         >
           <i :class="[link.icon]" class="duration-200 ease-in"></i>

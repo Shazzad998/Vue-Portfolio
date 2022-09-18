@@ -1,39 +1,38 @@
 <template>
-  <section
-    class="flex items-center justify-center pb-24 pt-48 lg:px-16 xl:px-20 2xl:px-32"
-  >
-    <div class="grid grid-cols-1 sm:py-8 md:grid-cols-2 md:py-14">
-      <div class="relative">
-        <div class="pt-16">
-          <div class="mb-8 flex items-center text-sm uppercase tracking-widest">
-            <span class="mr-4 block h-px w-10 bg-zinc-50"></span> I am
-          </div>
-          <div
-            class="hero-text space-y-2 font-antonio text-3xl font-bold text-zinc-100 lg:text-6xl"
-          >
-            <h1>Md. Shazzadul Islam.</h1>
-          </div>
-
-          <div class="hero-text mt-2 lg:mt-8">
-            <p class="font-light text-zinc-400 lg:text-3xl">
-              A Full-Stack
-              <span
-                class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
-                >Web Developer</span
-              >
-              specializing in building exceptional Websites with
-              <span
-                class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
-                >Laravel</span
-              >
-              &
-              <span
-                class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
-                >Vue js</span
-              >.
-            </p>
-          </div>
+  <SectionWrapper
+    ><div
+      class="mt-24 grid grid-cols-1 gap-y-6 sm:py-8 md:grid-cols-2 md:py-14"
+    >
+      <div class="hero-text px-2">
+        <div class="mb-8 flex items-center text-sm uppercase tracking-widest">
+          <span class="mr-4 block h-px w-10 bg-zinc-50"></span> I am
         </div>
+        <div
+          class="hero-text space-y-2 font-antonio text-3xl font-bold text-zinc-100 lg:text-4xl xl:text-5xl"
+        >
+          <h1>Md. Shazzadul Islam.</h1>
+        </div>
+
+        <div class="hero-text mt-2 lg:mt-8">
+          <p class="font-light text-zinc-400 lg:text-2xl">
+            A Full-Stack
+            <span
+              class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
+              >Web Developer</span
+            >
+            specializing in building exceptional Websites with
+            <span
+              class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
+              >Laravel</span
+            >
+            &
+            <span
+              class="font-normal text-zinc-100 underline decoration-2 underline-offset-2"
+              >Vue js</span
+            >.
+          </p>
+        </div>
+
         <div class="hero-button mt-20 lg:mt-10 xl:mt-20">
           <router-link :to="{ name: 'portfolio' }">
             <PrimaryButton> view portfolio </PrimaryButton>
@@ -41,7 +40,7 @@
         </div>
       </div>
 
-      <div class="hero-text flex items-center justify-center px-4">
+      <div class="hero-text hidden items-center justify-center md:flex">
         <svg
           class="w-full"
           viewBox="0 0 738 467"
@@ -288,9 +287,8 @@
             </g>
           </g>
         </svg>
-      </div>
-    </div>
-  </section>
+      </div></div
+  ></SectionWrapper>
 </template>
 
 <script setup>
@@ -298,6 +296,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { onMounted } from "vue";
 import PrimaryButton from "./PrimaryButton.vue";
+import SectionWrapper from "./SectionWrapper.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
