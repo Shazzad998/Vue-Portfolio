@@ -143,7 +143,7 @@ export default function useProjects() {
   const reload = () => {
     current_project_reload.value++;
   };
-  const current_project = ref([]);
+  const current_project = ref({});
 
   const featured_projects = projects.value.filter(
     (project) => project.featured == true

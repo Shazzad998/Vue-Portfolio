@@ -2,7 +2,7 @@ import Home from "./views/Home.vue";
 import Portfolio from "./views/Portfolio.vue";
 import Contact from "./views/Contact.vue";
 import NotFound from "./views/NotFound.vue";
-import ProjectDetail from "./views/ProjectDetail.vue";
+import ProjectDetail from "./views/ProjectDetail2.vue";
 
 export const routes = [
   { path: "/", component: Home, meta: { title: "Home" }, name: "home" },
