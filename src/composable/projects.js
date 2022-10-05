@@ -8,15 +8,11 @@ export default function useProjects() {
       title: "Task Manager",
       description:
         "A typical todo list with much more functionalities and work history. Built with vue js and tailwind css in the front end and laravel in the back end",
-      thumb: "../images/task-manager/port-2.webp",
+      thumb: "../images/task-manager/thumb-0.png",
       images: [
-        "../images/task-manager/tm_1.PNG",
-        "../images/task-manager/tm_2.PNG",
-        "../images/task-manager/tm_3.PNG",
-        "../images/task-manager/tm_4.PNG",
-        "../images/task-manager/tm_5.PNG",
-        "../images/task-manager/tm_6.PNG",
-        "../images/task-manager/tm_7.PNG",
+        "../images/task-manager/thumb-1.PNG",
+        "../images/task-manager/thumb-2.PNG",
+        "../images/task-manager/thumb-3.PNG",
       ],
       techs: ["Figma", "PhotoShop", "Vue js", "Tailwind Css", "Laravel"],
       steps: [
@@ -135,6 +131,30 @@ export default function useProjects() {
       client: "Md Shazzad",
       live_link: "https://shazzadulislam.netlify.app",
       completed_at: "22 April, 2022",
+      featured: true,
+    },
+
+    {
+      id: "6",
+      type: "Front-End",
+      title: "Portfolio Website",
+      description: "A web app for visualizing professional works and skills. ",
+      thumb: "../images/portfolio-site/thumb-0.png",
+      images: [
+        "../images/portfolio-site/thumb-1.png",
+        "../images/portfolio-site/thumb-2.png",
+      ],
+      techs: ["Figma", "illustrator", "Vue js", "Tailwind CSS", "GSAP"],
+      steps: [
+        "Logo and icons design with Illustrator",
+        "Simple Ui Design with Figma",
+        "Front-end development with Vue and Tailwind CSS",
+        "SPA using Vue Router",
+      ],
+      task: "UI Design and Front-End Development",
+      client: "Md Shazzad",
+      live_link: "https://shazzadulislam.netlify.app",
+      completed_at: "22 Augest, 2022",
       featured: true,
     },
   ]);

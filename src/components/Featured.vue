@@ -20,7 +20,7 @@
               <img
                 :src="project.thumb"
                 alt=""
-                class="aspect-[4/3] rounded object-cover"
+                class="aspect-[4/3] rounded border-2 border-zinc-900 object-cover shadow-2xl"
               />
               <span
                 class="card-item absolute -top-2 z-10 text-3xl font-bold sm:-top-4 sm:text-4xl lg:-top-6 lg:text-5xl"
