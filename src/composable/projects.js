@@ -4,6 +4,29 @@ export default function useProjects() {
   const projects = ref([
     {
       id: "1",
+      type: "Front-End",
+      title: "Portfolio Website",
+      description: "A web app for visualizing professional works and skills. ",
+      thumb: "../images/portfolio-site/thumb-0.png",
+      images: [
+        "../images/portfolio-site/thumb-1.png",
+        "../images/portfolio-site/thumb-2.png",
+      ],
+      techs: ["Figma", "illustrator", "Vue js", "Tailwind CSS", "GSAP"],
+      steps: [
+        "Logo and icons design with Illustrator",
+        "Simple Ui Design with Figma",
+        "Front-end development with Vue and Tailwind CSS",
+        "SPA using Vue Router",
+      ],
+      task: "UI Design and Front-End Development",
+      client: "Md Shazzad",
+      live_link: "https://shazzadulislam.netlify.app",
+      completed_at: "22 Augest, 2022",
+      featured: true,
+    },
+    {
+      id: "2",
       type: "Full-Stack",
       title: "Task Manager",
       description:
@@ -27,22 +50,15 @@ export default function useProjects() {
       featured: true,
     },
     {
-      id: "2",
+      id: "3",
       type: "Full-Stack",
       title: "E-commerce",
       description:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
-      thumb: "../images/e-commerce/shp_1.PNG",
+      thumb: "../images/e-commerce/thumb-0.png",
       images: [
-        "../images/e-commerce/shp_1.PNG",
-        "../images/e-commerce/shp_2.PNG",
-        "../images/e-commerce/shp_3.PNG",
-        "../images/e-commerce/shp_4.PNG",
-        "../images/e-commerce/shp_5.PNG",
-        "../images/e-commerce/shp_6.PNG",
-        "../images/e-commerce/shp_7.PNG",
-        "../images/e-commerce/shp_8.PNG",
-        "../images/e-commerce/shp_9.PNG",
+        "../images/e-commerce/thumb-1.png",
+        "../images/e-commerce/thumb-2.png",
       ],
       techs: ["Figma", "PhotoShop", "Vue js", "Tailwind Css", "Laravel"],
       steps: [
@@ -55,31 +71,6 @@ export default function useProjects() {
       live_link: "https://shazzadulislam.netlify.app",
       completed_at: "22 April, 2022",
       featured: false,
-    },
-    {
-      id: "3",
-      type: "Back-End",
-      title: "Inventory Management",
-      description:
-        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
-      thumb: "../images/inventory-management/1.png",
-      images: [
-        "../images/inventory-management/in_mn_1.PNG",
-        "../images/inventory-management/in_mn_2.PNG",
-        "../images/inventory-management/in_mn_3.PNG",
-        "../images/inventory-management/in_mn_4.PNG",
-      ],
-      techs: ["Figma", "PhotoShop", "Vue js", "Tailwind Css", "Laravel"],
-      steps: [
-        "Simple Ui Design with Figma",
-        "Front-End Development with vue js and Tailwind css",
-        "Back-End Api Development with Laravel 9",
-      ],
-      task: "Built the complete website from scratch",
-      client: "Md Shazzad",
-      live_link: "https://shazzadulislam.netlify.app",
-      completed_at: "22 April, 2022",
-      featured: true,
     },
 
     {
@@ -136,25 +127,27 @@ export default function useProjects() {
 
     {
       id: "6",
-      type: "Front-End",
-      title: "Portfolio Website",
-      description: "A web app for visualizing professional works and skills. ",
-      thumb: "../images/portfolio-site/thumb-0.png",
+      type: "Back-End",
+      title: "Inventory Management",
+      description:
+        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
+      thumb: "../images/inventory-management/thumb-0.png",
       images: [
-        "../images/portfolio-site/thumb-1.png",
-        "../images/portfolio-site/thumb-2.png",
+        "../images/inventory-management/thumb-1.png",
+        "../images/inventory-management/thumb-2.png",
+        "../images/inventory-management/thumb-3.png",
+        "../images/inventory-management/thumb-4.png",
       ],
-      techs: ["Figma", "illustrator", "Vue js", "Tailwind CSS", "GSAP"],
+      techs: ["Figma", "PhotoShop", "Vue js", "Tailwind Css", "Laravel"],
       steps: [
-        "Logo and icons design with Illustrator",
         "Simple Ui Design with Figma",
-        "Front-end development with Vue and Tailwind CSS",
-        "SPA using Vue Router",
+        "Front-End Development with vue js and Tailwind css",
+        "Back-End Api Development with Laravel 9",
       ],
-      task: "UI Design and Front-End Development",
+      task: "Built the complete website from scratch",
       client: "Md Shazzad",
       live_link: "https://shazzadulislam.netlify.app",
-      completed_at: "22 Augest, 2022",
+      completed_at: "22 April, 2022",
       featured: true,
     },
   ]);
