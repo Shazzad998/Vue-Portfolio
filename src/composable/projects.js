@@ -79,13 +79,10 @@ export default function useProjects() {
       title: "Travel Site",
       description:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
-      thumb: "../images/travel-site/travel-site-thumb.png",
+      thumb: "../images/travel-site/thumb-0.png",
       images: [
-        "../images/travel-site/t_1.png",
-        "../images/travel-site/t_2.png",
-        "../images/travel-site/t_3.png",
-        "../images/travel-site/t_4.png",
-        "../images/travel-site/t_5.png",
+        "../images/travel-site/thumb-1.png",
+        "../images/travel-site/thumb-2.png",
       ],
       techs: ["Figma", "PhotoShop", "illustrator"],
       steps: [
