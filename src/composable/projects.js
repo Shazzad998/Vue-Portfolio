@@ -6,7 +6,8 @@ export default function useProjects() {
       id: "1",
       type: "Front-End",
       title: "Portfolio Website",
-      description: "A web app for visualizing professional works and skills. ",
+      description:
+        "A web app for visualizing professional works and skills. Includes multiple pages . Designed in Figma and developed with javascript frame work Vue js. ",
       thumb: "../images/portfolio-site/thumb-0.png",
       images: [
         "../images/portfolio-site/thumb-1.png",
@@ -14,10 +15,9 @@ export default function useProjects() {
       ],
       techs: ["Figma", "illustrator", "Vue js", "Tailwind CSS", "GSAP"],
       steps: [
-        "Logo and icons design with Illustrator",
-        "Simple Ui Design with Figma",
-        "Front-end development with Vue and Tailwind CSS",
-        "SPA using Vue Router",
+        "Ui Design with Figma",
+        "Responsive Design Tailwind CSS",
+        "Front-end development with Vue js",
       ],
       task: "UI Design and Front-End Development",
       client: "Md Shazzad",
@@ -39,7 +39,7 @@ export default function useProjects() {
       ],
       techs: ["Figma", "PhotoShop", "Vue js", "Tailwind Css", "Laravel"],
       steps: [
-        "Simple Ui Design with Figma",
+        "Ui Design with Figma",
         "Front-End Development with vue js and Tailwind css",
         "Back-End Api Development with Laravel 9",
       ],
@@ -54,7 +54,7 @@ export default function useProjects() {
       type: "Full-Stack",
       title: "E-commerce",
       description:
-        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track.",
+        "An E-commerce website built with laravel . The website has multiple pages including landing page, shop page, cart page, check out and more. It has an Admin panel to manage the site.",
       thumb: "../images/e-commerce/thumb-0.png",
       images: [
         "../images/e-commerce/thumb-1.png",
